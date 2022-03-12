@@ -15,11 +15,34 @@ router.post('/passwordReset', function (req, res, next) {
 
     var mailObj = {
         to: req.body.email,
-        from: "help@lazocompany.com",
+        from: "admin@surfgenie.com",
+        templateId: "d-3586b483b7e94c1b9520f4ed23d46648",
+        dynamic_template_data: {
+            //firstname: req.body.name,
+            linkurl: 'https://surfgenie.com/password-reset?token=' + token
+        }
+    }
+
+    sendMail(mailObj);
+    res.status(200).send({});
+
+    //update token and set expiration date of 2 days
+    tables.update('users',req.body.user_id,'token', token);
+    tables.update('users',req.body.user_id,'token_expiration', Date.now() + (1000 * 60 * 60 * 24 * 2));
+    
+});
+
+router.post('/verifyEmailRequest', function (req, res, next) {
+    //console.log('sendgrid/passwordReset', req.body);
+    var token = common.generateResetToken();
+
+    var mailObj = {
+        to: req.body.email,
+        from: "admin@surfgenie.com",
         templateId: "d-faa7718613ec4afcb2175aceb7334e29",
         dynamic_template_data: {
             //firstname: req.body.name,
-            linkurl: 'https://app.lazocompany.com/password-reset?token=' + token
+            linkurl: 'https://surfgenie.com/verify-email?token=' + token
         }
     }
 
