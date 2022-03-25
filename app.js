@@ -14,7 +14,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var tablesRouter = require('./routes/tables');
 var sendgridRouter = require('./routes/sendgrid');
-
+var krakenRouter = require('./routes/kraken');
+var zipcodeapiRouter = require('./routes/zipcodeapi');
 
 var app = express();
 
@@ -125,6 +126,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/tables', tablesRouter);
 app.use('/sendgrid',sendgridRouter);
+app.use('/kraken',krakenRouter);
+app.use('/zipcodeapi',zipcodeapiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

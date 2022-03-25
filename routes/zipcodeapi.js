@@ -4,8 +4,8 @@ const https = require('https');
 var tables = require('../helpers/tables');
 
 router.get('/zipcode/:zip', function (req, res, next) {
-    
-    const clientKey = process.env.ZIPCODEAPI_CLIENT_KEY;
+
+    const clientKey = process.env.ZIPCODEAPI_APPLICATION_KEY;
 
     const options = new URL(`https://www.zipcodeapi.com/rest/${clientKey}/info.json/${req.params.zip}/radians`); 
     
@@ -20,9 +20,10 @@ router.get('/zipcode/:zip', function (req, res, next) {
         /*
         resx.on('end', d => {
             console.log('response zipapi',reqx);
-            //res.status(200).send(d);
+            res.status(200).send(d);
         });
         */
+        
     })
 
     reqx.on('error', error => {
