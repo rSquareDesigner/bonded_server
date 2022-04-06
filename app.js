@@ -16,6 +16,8 @@ var tablesRouter = require('./routes/tables');
 var sendgridRouter = require('./routes/sendgrid');
 var krakenRouter = require('./routes/kraken');
 var zipcodeapiRouter = require('./routes/zipcodeapi');
+var verifyRouter = require('./routes/verify');
+var twilioRouter = require('./routes/twilio');
 
 var app = express();
 
@@ -128,6 +130,8 @@ app.use('/tables', tablesRouter);
 app.use('/sendgrid',sendgridRouter);
 app.use('/kraken',krakenRouter);
 app.use('/zipcodeapi',zipcodeapiRouter);
+app.use('/verify',verifyRouter);
+app.use('/twilio',twilioRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

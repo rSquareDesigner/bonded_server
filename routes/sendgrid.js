@@ -3,7 +3,8 @@
 var express = require('express');
 var router = express.Router();
 const sgMail = require('@sendgrid/mail');
-var common = require('../helpers/common');
+const common = require('../helpers/common');
+const verify = require('../helpers/verify');
 const tables = require('../helpers/tables');
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -32,26 +33,25 @@ router.post('/passwordReset', function (req, res, next) {
     
 });
 
-router.post('/verifyEmailRequest', function (req, res, next) {
-    //console.log('sendgrid/passwordReset', req.body);
-    var token = common.generateResetToken();
+
+router.post('/verifyEmail', function (req, res, next) {
+    
+    var code = common.generateVerificationCode();
 
     var mailObj = {
         to: req.body.email,
         from: "admin@surfgenie.com",
-        templateId: "d-faa7718613ec4afcb2175aceb7334e29",
+        templateId: "d-e5334b37f8e048ba8976bc5ae26a1ac9",
         dynamic_template_data: {
-            //firstname: req.body.name,
-            linkurl: 'https://surfgenie.com/verify-email?token=' + token
+            email: req.body.email,
+            verification_code: code
         }
     }
 
     sendMail(mailObj);
     res.status(200).send({});
 
-    //update token and set expiration date of 2 days
-    tables.update('users',req.body.user_id,'token', token);
-    tables.update('users',req.body.user_id,'token_expiration', Date.now() + (1000 * 60 * 60 * 24 * 2));
+    verify.storeEmailcode(req.body.user_id, code);
     
 });
 
