@@ -18,6 +18,7 @@ var krakenRouter = require('./routes/kraken');
 var zipcodeapiRouter = require('./routes/zipcodeapi');
 var verifyRouter = require('./routes/verify');
 var twilioRouter = require('./routes/twilio');
+var blobRouter = require('./routes/blob');
 
 var app = express();
 
@@ -132,6 +133,7 @@ app.use('/kraken',krakenRouter);
 app.use('/zipcodeapi',zipcodeapiRouter);
 app.use('/verify',verifyRouter);
 app.use('/twilio',twilioRouter);
+app.use('/blob',blobRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
