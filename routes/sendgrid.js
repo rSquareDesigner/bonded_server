@@ -55,6 +55,42 @@ router.post('/verifyEmail', function (req, res, next) {
     
 });
 
+router.post('/messageNotification', function (req, res, next) {
+
+    //get recipient's email from user_id
+    tables.getByField('users','id', req.body.recipient_user_id).then(function(result){
+        var recipient_user = result[0];
+        
+        if (recipient_user){
+            var mailObj = {
+                to: recipient_user.email,
+                from: "admin@surfgenie.com",
+                templateId: "d-f2510f67b5304457b4d34af1cd0af72e",
+                dynamic_template_data: {
+                    user_name: req.body.user_name,
+                    user_image: req.body.user_image,
+                    user_message: req.body.user_message,
+                    listing_title: req.body.listing_title,
+                    listing_description: req.body.listing_description,
+                    listing_image: req.body.listing_image,
+                    link_url: 'https://surfgenie.com/messages/' + req.body.chat_id
+                }
+            }
+        
+            sendMail(mailObj);
+            res.status(200).send({});
+        }
+
+        else res.status(500).send({msg:'user not found'});
+    });
+
+    
+    
+
+    
+    
+});
+
 
 
 function sendMail(request){
