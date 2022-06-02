@@ -83,11 +83,41 @@ router.post('/messageNotification', function (req, res, next) {
 
         else res.status(500).send({msg:'user not found'});
     });
+    
+});
 
-    
-    
+router.post('/rateYourPurchase', function (req, res, next) {
 
-    
+    //get recipient's email from user_id
+    Promise.all([
+        tables.getByField('users','id', req.body.seller_user_id),
+        tables.getByField('users','id', req.body.buyer_user_id)
+    ]).then(function(results){
+        var seller = results[0][0];
+        var buyer = results[1][0];
+        //console.log('seller', seller);
+        //console.log('buyer', buyer);
+        if (seller && buyer){
+            var mailObj = {
+                to: buyer.email,
+                from: "admin@surfgenie.com",
+                templateId: "d-e11857bf685643f2a65a5506b6234443",
+                dynamic_template_data: {
+                    seller_name: seller.name,
+                    seller_image: seller.image,
+                    listing_title: req.body.listing_title,
+                    listing_description: req.body.listing_description,
+                    listing_image: req.body.listing_image,
+                    link_url: 'https://surfgenie.com/transaction-feedback/' + req.body.transaction_id
+                }
+            }
+        
+            sendMail(mailObj);
+            res.status(200).send({});
+        }
+
+        else res.status(500).send({msg:'user not found'});
+    });
     
 });
 
