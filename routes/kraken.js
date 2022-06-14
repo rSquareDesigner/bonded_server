@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Kraken = require("kraken");
+var image_optimization = require('../helpers/image_optimization');
 //var log = require('../log');
 
 router.post('/optimizeImage', function(req, res, next) {
@@ -55,19 +56,32 @@ router.post('/optimizeImage', function(req, res, next) {
                 //log.kraken('Success. Optimized image URL: %s'+ status.kraked_url);
                 
                 res.status(200).send({msg:"success with kraken"});
+                //pending_optimization.success(filename);
 
             } else {
                 console.log("Fail. Error message: %s", status.message);
-                res.status(500).send("Fail. Error message: %s" + status.message);
+                res.status(201).send("Fail. Error message: %s" + status.message);
+                //pending_optimization.failed(filename);
                 //log.kraken('ERROR: ' + status.message);
             }
         }
         else {
             console.log("response from kraken is undefined");
-            res.status(500).send("Response from kraken is undefined");
+            res.status(201).send("Response from kraken is undefined");
+            //pending_optimization.failed(filename);
             //log.kraken('ERROR: Response from kraken is undefined');
         }
     });
+});
+
+router.post('/optimizeListingImages', function(req, res, next) {
+    var listing_id = req.body.listing_id;
+
+    if (listing_id){
+        res.status(200).send({msg: 'image optimization request received'});
+        image_optimization.optimizeImages(listing_id);
+    }
+    else res.status(200).send({msg: 'listing_id is missing from request'});
 });
 
 module.exports = router;
