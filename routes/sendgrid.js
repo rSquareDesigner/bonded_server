@@ -121,6 +121,27 @@ router.post('/rateYourPurchase', function (req, res, next) {
     
 });
 
+router.post('/listingReported', function (req, res, next) {
+
+    var mailObj = {
+        to: "surfgeniemvp@gmail.com",
+        from: "admin@surfgenie.com",
+        templateId: "d-9166d630187e43f9a0336ad61f18d32b",
+        dynamic_template_data: {
+            listing_title: req.body.listing_title,
+            listing_image: req.body.listing_image,
+            reason_for_report: req.body.reason_for_report,
+            report_note: req.body.report_note,
+            link_url: 'https://surfgenie.com/admin/reports'
+        }
+    }
+
+    sendMail(mailObj);
+    res.status(200).send({});
+
+});
+    
+
 
 
 function sendMail(request){

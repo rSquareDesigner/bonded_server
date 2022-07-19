@@ -32,5 +32,22 @@ router.post('/confirmPhone', function (req, res, next) {
 
 });
 
+router.post('/listingReported', function (req, res, next) {
+    var phone = '+17026725093';
+    //var phone = '+15403141828';
+    
+    client.messages
+            .create({
+                body: 'A user has reported a listing. You can see the reports here ' + 'https://surfgenie.com/admin/reports',
+                from: '+17752568484',
+                to: phone,
+            })
+            .then(message => {
+                res.status(200).send({});
+                //console.log(message.sid)
+            });
+
+});
+
 
 module.exports = router;
