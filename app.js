@@ -20,6 +20,7 @@ var verifyRouter = require('./routes/verify');
 var twilioRouter = require('./routes/twilio');
 var blobRouter = require('./routes/blob');
 var chatsRouter = require('./routes/chats');
+var staticpagesRouter = require('./routes/staticpages');
 
 var app = express();
 
@@ -40,6 +41,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use(passport.initialize());
 
@@ -136,6 +138,7 @@ app.use('/verify',verifyRouter);
 app.use('/twilio',twilioRouter);
 app.use('/blob',blobRouter);
 app.use('/chats',chatsRouter);
+app.use('/staticpages',staticpagesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
