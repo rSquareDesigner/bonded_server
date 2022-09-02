@@ -23,7 +23,7 @@ router.post('/optimizeImage', function(req, res, next) {
 
     //log.kraken('opt request: ' + filenameo + ' ' + container);
     
-    var imageurl = 'https://surfgenie.blob.core.windows.net/' + container + '/' + req.body.filename;
+    var imageurl = 'https://seelbach.blob.core.windows.net/' + container + '/' + req.body.filename;
     
     var kraken = new Kraken({
         "api_key": process.env.KRAKEN_KEY,
@@ -38,7 +38,7 @@ router.post('/optimizeImage', function(req, res, next) {
         },
         lossy: true,
         azure_store: {
-            account: "surfgenie",
+            account: "seelbach",
             key: process.env.AZURE_STORAGE_KEY,
             container: container,
             path: filenameo,

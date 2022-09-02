@@ -2,7 +2,7 @@ var tables = require('./tables');
 const { BlobServiceClient } = require("@azure/storage-blob");
 var Kraken = require("kraken");
 
-const account = "surfgenie";
+const account = "seelbach";
 const sas = process.env.AZURE_STORAGE_SAS;
  
 const blobServiceClient = new BlobServiceClient(
@@ -93,7 +93,7 @@ function optimizeImage(listing_id, filename, size){
 
     //log.kraken('opt request: ' + filenameo + ' ' + container);
     
-    var imageurl = 'https://surfgenie.blob.core.windows.net/' + container + '/' + listing_id + '/' + filename;
+    var imageurl = 'https://seelbach.blob.core.windows.net/' + container + '/' + listing_id + '/' + filename;
 
     //console.log('optimize - ', imageurl);
     
@@ -110,7 +110,7 @@ function optimizeImage(listing_id, filename, size){
         },
         lossy: true,
         azure_store: {
-            account: "surfgenie",
+            account: "seelbach",
             key: process.env.AZURE_STORAGE_KEY,
             container: container,
             path: filenameo,

@@ -3,7 +3,7 @@ var router = express.Router();
 
 const { BlobServiceClient } = require("@azure/storage-blob");
  
-const account = "surfgenie";
+const account = "seelbach";
 const sas = process.env.AZURE_STORAGE_SAS;
  
 const blobServiceClient = new BlobServiceClient(

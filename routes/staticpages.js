@@ -24,18 +24,18 @@ function buildHtml(req) {
         '<head>' +
         '<base href="/">' +
         '<meta charset="utf-8">' +
-        '<meta property="og:url" content="https://server.surfgenie.com/item-' + req.body.id + '.html" />' +
+        '<meta property="og:url" content="https://server.seelbach.com/item-' + req.body.id + '.html" />' +
         '<meta property="og:type" content="article" />' +
-        '<meta property="og:title" content="SurfGenie" />' +
+        '<meta property="og:title" content="seelbach" />' +
         '<meta property="og:description" content="' + req.body.description + '" />'+
         '<meta property="og:image" content="' + req.body.image + '" />' +
         '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />' +
         '<script type="text/javascript">' +
-        'window.location.href = "https://surfgenie.com/item-details/' + req.body.id + '";' +
+        'window.location.href = "https://seelbach.com/item-details/' + req.body.id + '";' +
         '</script>' +
         '</head>' +
         '<body>' +
-        'If you are not redirected automatically, follow this <a href="https://surfgenie.com/item-details/' + req.body.id + '">link</a>.' +
+        'If you are not redirected automatically, follow this <a href="https://seelbach.com/item-details/' + req.body.id + '">link</a>.' +
         '</body>' +
         '</html>';
 }

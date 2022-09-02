@@ -18,7 +18,7 @@ router.post('/confirmPhone', function (req, res, next) {
         if (phonex.length == 10) phonex = '+1' + phonex;
         client.messages
             .create({
-                body: 'Your SurfGenie confirmation code is: ' + code,
+                body: 'Your seelbach confirmation code is: ' + code,
                 from: '+17752568484',
                 to: phonex,
             })
@@ -38,7 +38,7 @@ router.post('/listingReported', function (req, res, next) {
     
     client.messages
             .create({
-                body: 'A user has reported a listing. You can see the reports here ' + 'https://surfgenie.com/admin/reports',
+                body: 'A user has reported a listing. You can see the reports here ' + 'https://seelbach.com/admin/reports',
                 from: '+17752568484',
                 to: phone,
             })

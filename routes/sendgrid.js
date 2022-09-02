@@ -16,11 +16,11 @@ router.post('/passwordReset', function (req, res, next) {
 
     var mailObj = {
         to: req.body.email,
-        from: "admin@surfgenie.com",
+        from: "admin@seelbach.com",
         templateId: "d-3586b483b7e94c1b9520f4ed23d46648",
         dynamic_template_data: {
             //firstname: req.body.name,
-            linkurl: 'https://surfgenie.com/password-reset?token=' + token
+            linkurl: 'https://seelbach.com/password-reset?token=' + token
         }
     }
 
@@ -40,7 +40,7 @@ router.post('/verifyEmail', function (req, res, next) {
 
     var mailObj = {
         to: req.body.email,
-        from: "admin@surfgenie.com",
+        from: "admin@seelbach.com",
         templateId: "d-e5334b37f8e048ba8976bc5ae26a1ac9",
         dynamic_template_data: {
             email: req.body.email,
@@ -64,7 +64,7 @@ router.post('/messageNotification', function (req, res, next) {
         if (recipient_user){
             var mailObj = {
                 to: recipient_user.email,
-                from: "admin@surfgenie.com",
+                from: "admin@seelbach.com",
                 templateId: "d-f2510f67b5304457b4d34af1cd0af72e",
                 dynamic_template_data: {
                     user_name: req.body.user_name,
@@ -73,7 +73,7 @@ router.post('/messageNotification', function (req, res, next) {
                     listing_title: req.body.listing_title,
                     listing_description: req.body.listing_description,
                     listing_image: req.body.listing_image,
-                    link_url: 'https://surfgenie.com/messages/' + req.body.chat_id
+                    link_url: 'https://seelbach.com/messages/' + req.body.chat_id
                 }
             }
         
@@ -100,7 +100,7 @@ router.post('/rateYourPurchase', function (req, res, next) {
         if (seller && buyer){
             var mailObj = {
                 to: buyer.email,
-                from: "admin@surfgenie.com",
+                from: "admin@seelbach.com",
                 templateId: "d-e11857bf685643f2a65a5506b6234443",
                 dynamic_template_data: {
                     seller_name: seller.name,
@@ -108,7 +108,7 @@ router.post('/rateYourPurchase', function (req, res, next) {
                     listing_title: req.body.listing_title,
                     listing_description: req.body.listing_description,
                     listing_image: req.body.listing_image,
-                    link_url: 'https://surfgenie.com/transaction-feedback/' + req.body.transaction_id
+                    link_url: 'https://seelbach.com/transaction-feedback/' + req.body.transaction_id
                 }
             }
         
@@ -124,15 +124,15 @@ router.post('/rateYourPurchase', function (req, res, next) {
 router.post('/listingReported', function (req, res, next) {
 
     var mailObj = {
-        to: "surfgeniemvp@gmail.com",
-        from: "admin@surfgenie.com",
+        to: "seelbachmvp@gmail.com",
+        from: "admin@seelbach.com",
         templateId: "d-9166d630187e43f9a0336ad61f18d32b",
         dynamic_template_data: {
             listing_title: req.body.listing_title,
             listing_image: req.body.listing_image,
             reason_for_report: req.body.reason_for_report,
             report_note: req.body.report_note,
-            link_url: 'https://surfgenie.com/admin/reports'
+            link_url: 'https://seelbach.com/admin/reports'
         }
     }
 
