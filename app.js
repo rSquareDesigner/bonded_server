@@ -21,6 +21,7 @@ var twilioRouter = require('./routes/twilio');
 var blobRouter = require('./routes/blob');
 var chatsRouter = require('./routes/chats');
 var staticpagesRouter = require('./routes/staticpages');
+var saleAgreementsRouter = require('./routes/sale-agreements');
 
 var app = express();
 
@@ -139,6 +140,7 @@ app.use('/twilio',twilioRouter);
 app.use('/blob',blobRouter);
 app.use('/chats',chatsRouter);
 app.use('/staticpages',staticpagesRouter);
+app.use('/sale-agreements',saleAgreementsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

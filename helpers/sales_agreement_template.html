@@ -1,0 +1,550 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Bulk Sales Agreement.serial 2022-002.rev.07182022</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            text-indent: 0;
+        }
+
+        .h1,
+        h1 {
+            color: black;
+            font-family: "Times New Roman", serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 12pt;
+        }
+
+        .p,
+        p {
+            color: black;
+            font-family: "Times New Roman", serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 12pt;
+            margin: 0pt;
+        }
+
+        .s1 {
+            color: black;
+            font-family: "Times New Roman", serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: underline;
+            font-size: 12pt;
+        }
+
+        .s2 {
+            color: black;
+            font-family: "Times New Roman", serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 12pt;
+        }
+
+        .s3 {
+            color: black;
+            font-family: Tahoma, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 10pt;
+        }
+
+        .s4 {
+            color: black;
+            font-family: Tahoma, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 10pt;
+        }
+
+        a {
+            color: black;
+            font-family: "Times New Roman", serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 12pt;
+        }
+
+        .s5 {
+            color: black;
+            font-family: "Arial Nova Cond Light", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 12pt;
+        }
+
+        .s6 {
+            color: black;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+        .s7 {
+            color: black;
+            font-family: "Times New Roman", serif;
+            font-style: italic;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 12pt;
+        }
+
+        .s8 {
+            color: black;
+            font-family: "Times New Roman", serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 1pt;
+        }
+
+        li {
+            display: block;
+        }
+
+        #l1 {
+            padding-left: 0pt;
+            counter-reset: c1 1;
+        }
+
+        #l1>li>*:first-child:before {
+            counter-increment: c1;
+            content: counter(c1, decimal)". ";
+            color: black;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+        #l1>li:first-child>*:first-child:before {
+            counter-increment: c1 0;
+        }
+
+        #l2 {
+            padding-left: 0pt;
+            counter-reset: c2 1;
+        }
+
+        #l2>li>*:first-child:before {
+            counter-increment: c2;
+            content: counter(c2, lower-latin)". ";
+            color: black;
+            font-family: "Times New Roman", serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 12pt;
+        }
+
+        #l2>li:first-child>*:first-child:before {
+            counter-increment: c2 0;
+        }
+
+        li {
+            display: block;
+        }
+
+        #l3 {
+            padding-left: 0pt;
+            counter-reset: d1 12;
+        }
+
+        #l3>li>*:first-child:before {
+            counter-increment: d1;
+            content: counter(d1, decimal)". ";
+            color: black;
+            font-family: "Times New Roman", serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 12pt;
+        }
+
+        #l3>li:first-child>*:first-child:before {
+            counter-increment: d1 0;
+        }
+
+        table,
+        tbody {
+            vertical-align: top;
+            overflow: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="padding-top: 3pt;padding-left: 178pt;text-indent: 0pt;line-height: 109%;text-align: center;"><a
+            name="bookmark0">Bulk Sales Agreement FEDERAL LICENSEE</a></h1>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <p style="padding-top: 4pt;text-indent: 0pt;text-align: right;">Serial:<u> {{transaction.serial_number}}</u></p>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <p style="padding-top: 4pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Date: {{transaction.date}}</p>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <h1 style="padding-left: 5pt;text-indent: 0pt;text-align: left;">Purchaser: {{purchaser.name}}</h1>
+    <h1 style="padding-top: 1pt;padding-left: 77pt;text-indent: 0pt;text-align: left;">{{purchaser.address}}</h1>
+    <h1 style="padding-top: 1pt;padding-left: 77pt;text-indent: 0pt;text-align: left;">{{purchaser.city}}, {{purchaser.state}} {{purchaser.zipcode}}</h1>
+    <h1 style="padding-left: 5pt;text-indent: 72pt;line-height: 30pt;text-align: left;">Federal Wholesale # {{transaction.wholesale_number}}
+        Seller: {{seller.name}}</h1>
+    <p style="padding-top: 1pt;padding-left: 77pt;text-indent: 0pt;line-height: 109%;text-align: left;">{{seller.address}}
+        {{seller.city}}, {{seller.state}} {{seller.zipcode}}</p>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <h1 style="padding-left: 5pt;text-indent: 0pt;line-height: 109%;text-align: left;">In consideration of the
+        respective covenants and agreements contained in this Bulk Sales Agreement (the “Agreement”), Purchaser hereby
+        agrees to purchase through Seller and Seller hereby agrees to sell to Purchaser the following (the “Materials”).
+        Buyer understands that Seller does not own said barrels and is acting as a <u>broker</u> of said barrels, which
+        may be owned by one or more entities. Other brokers may be involved in this transaction, and Seller may split
+        any fees contemplated within this agreement with the other brokers.</h1>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <h1 style="padding-left: 5pt;text-indent: 0pt;text-align: left;">The fee stated below is the fee quoted to the
+        Seller by other broker(s).</h1>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <table style="border-collapse:collapse;margin-left:16.05pt" cellspacing="0">
+        <tr style="height:34pt">
+            <td style="width:183pt;border-top-style:solid;border-top-width:1pt;border-top-color:#7F7F7F;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-bottom-style:solid;border-bottom-width:3pt;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F"
+                bgcolor="#C0C0C0">
+                <p class="s3" style="padding-top: 3pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">
+                    Item/Description</p>
+            </td>
+            <td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-top-color:#7F7F7F;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-bottom-style:solid;border-bottom-width:3pt;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F"
+                bgcolor="#C0C0C0">
+                <p class="s3" style="padding-top: 3pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">Price</p>
+            </td>
+            <td style="width:58pt;border-top-style:solid;border-top-width:1pt;border-top-color:#7F7F7F;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-bottom-style:solid;border-bottom-width:3pt;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F"
+                bgcolor="#C0C0C0">
+                <p class="s3"
+                    style="padding-top: 3pt;padding-left: 4pt;padding-right: 10pt;text-indent: 0pt;text-align: left;">
+                    Unit of Measure</p>
+            </td>
+            <td style="width:79pt;border-top-style:solid;border-top-width:1pt;border-top-color:#7F7F7F;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-bottom-style:solid;border-bottom-width:3pt;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F"
+                bgcolor="#C0C0C0">
+                <p class="s3" style="padding-top: 3pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">Quantity</p>
+            </td>
+            <td style="width:83pt;border-top-style:solid;border-top-width:1pt;border-top-color:#7F7F7F;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-bottom-style:solid;border-bottom-width:3pt;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F"
+                bgcolor="#C0C0C0">
+                <p class="s3" style="padding-top: 3pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">Total Amount
+                </p>
+            </td>
+        </tr>
+        <tr style="height:34pt">
+            <td
+                style="width:183pt;border-top-style:solid;border-top-width:3pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s3"
+                    style="padding-top: 3pt;padding-left: 4pt;padding-right: 26pt;text-indent: 0pt;text-align: left;">
+                    Heaven Hill Bourbon 78/10/12 - Lot B13K08</p>
+            </td>
+            <td
+                style="width:54pt;border-top-style:solid;border-top-width:3pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s4" style="padding-top: 3pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">$8,200.00
+                </p>
+            </td>
+            <td
+                style="width:58pt;border-top-style:solid;border-top-width:3pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s4"
+                    style="padding-top: 3pt;padding-left: 4pt;padding-right: 26pt;text-indent: 0pt;text-align: left;">53
+                    gal Barrel</p>
+            </td>
+            <td
+                style="width:79pt;border-top-style:solid;border-top-width:3pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s4" style="padding-top: 3pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">60*</p>
+            </td>
+            <td
+                style="width:83pt;border-top-style:solid;border-top-width:3pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s3" style="padding-top: 3pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">$492,000.00
+                </p>
+            </td>
+        </tr>
+        <tr style="height:30pt">
+            <td
+                style="width:183pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s3"
+                    style="padding-top: 5pt;padding-left: 4pt;padding-right: 26pt;text-indent: 0pt;line-height: 12pt;text-align: left;">
+                    Finder’s fee 7.5% of gross Total Amount</p>
+            </td>
+            <td
+                style="width:54pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s4" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">$615.00</p>
+            </td>
+            <td
+                style="width:58pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                <p class="s4" style="padding-left: 4pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Per barrel
+                </p>
+            </td>
+            <td
+                style="width:79pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s4" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">60</p>
+            </td>
+            <td
+                style="width:83pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s3" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">$36,900.00
+                </p>
+            </td>
+        </tr>
+        <tr style="height:12pt">
+            <td
+                style="width:183pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            </td>
+            <td
+                style="width:54pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            </td>
+            <td
+                style="width:58pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s4" style="padding-left: 4pt;text-indent: 0pt;line-height: 11pt;text-align: left;">unit</p>
+            </td>
+            <td
+                style="width:79pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            </td>
+            <td
+                style="width:83pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s3" style="padding-left: 4pt;text-indent: 0pt;line-height: 11pt;text-align: left;">$528,900.00
+                </p>
+            </td>
+        </tr>
+        <tr style="height:12pt">
+            <td
+                style="width:183pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s3" style="padding-left: 4pt;text-indent: 0pt;line-height: 11pt;text-align: left;">*Storage
+                    paid through July 31,</p>
+            </td>
+            <td
+                style="width:54pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            </td>
+            <td
+                style="width:58pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            </td>
+            <td
+                style="width:79pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            </td>
+            <td
+                style="width:83pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            </td>
+        </tr>
+        <tr style="height:31pt">
+            <td
+                style="width:183pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-bottom-style:solid;border-bottom-width:3pt;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p class="s3" style="padding-left: 4pt;text-indent: 0pt;line-height: 12pt;text-align: left;">2022.</p>
+            </td>
+            <td
+                style="width:54pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-bottom-style:solid;border-bottom-width:3pt;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            </td>
+            <td
+                style="width:58pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-bottom-style:solid;border-bottom-width:3pt;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            </td>
+            <td
+                style="width:79pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-bottom-style:solid;border-bottom-width:3pt;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            </td>
+            <td
+                style="width:83pt;border-left-style:solid;border-left-width:1pt;border-left-color:#7F7F7F;border-bottom-style:solid;border-bottom-width:3pt;border-right-style:solid;border-right-width:1pt;border-right-color:#7F7F7F">
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            </td>
+        </tr>
+    </table>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+
+    <!--
+    <p style="padding-left: 5pt;text-indent: 0pt;line-height: 109%;text-align: left;">*This is the second BSA for Blue
+        Run purchases of the Heaven Hill barrels. The first BSA executed 07/14/2022 was for 25 barrels. The combined
+        total between the two BSAs is 85.</p>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    -->
+    <ol id="l1">
+        <li data-list-text="1.">
+            <h1 style="padding-left: 23pt;text-indent: 0pt;line-height: 109%;text-align: left;">PRICE AND PAYMENT TERMS:
+                <span class="p">Purchaser shall pay Seller the price as listed in the above schedule as the “Total
+                    Amount,” in immediately available funds via wire transfer to</span></h1>
+            <p class="s2"
+                style="padding-top: 3pt;padding-left: 23pt;text-indent: 0pt;line-height: 109%;text-align: justify;">
+                <span class="p">the account listed below. </span>PAYMENT DUE BEFORE {{transaction.payment_deadline_string}}
+                <span class="p">If Seller fails for any reason, for
+                    any reason other than buyers inability to receive the transfer of the barrels into its storage
+                    account at Bardstown Bourbon, to fulfill order within 45 days after execution of this agreement and
+                    transfer of funds (the “Fulfillment Deadline”), Seller will refund Purchaser for any unfilled
+                    portion of the order for which funds have been transferred within 14 business days after the
+                    Fulfillment Deadline. The Fulfillment Deadline may be extended upon the mutual agreement of the
+                    parties.</span></p>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <p style="padding-left: 41pt;text-indent: 0pt;text-align: left;">{{seller.bank_name}}</p>
+            <p style="padding-top: 1pt;padding-left: 41pt;text-indent: 0pt;line-height: 109%;text-align: left;">Account
+                Owner: {{seller.account_owner_name}} Routing: {{seller.routing_number}}</p>
+            <p style="padding-left: 41pt;text-indent: 0pt;line-height: 14pt;text-align: left;">Account #: {{seller.account_number}}</p>
+            <p style="padding-top: 1pt;padding-left: 41pt;text-indent: 0pt;text-align: left;">Contact: {{seller.contact_name}}/{{seller.contact_phone_number}}.</p>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <p style="padding-left: 23pt;text-indent: 0pt;text-align: justify;"><a
+                    href="mailto:{{seller.contact_email}}">Email proof of wire via
+                    email to {{seller.contact_name}} at {{seller.contact_email}}.</a></p>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        </li>
+        <li data-list-text="2.">
+            <h1 style="padding-left: 23pt;text-indent: 0pt;line-height: 109%;text-align: left;">TITLE AND RISK OF LOSS:
+                <span class="p">Except for any loss resulting from a willful act or gross negligence by Seller, title
+                    and risk of loss to the Materials shall pass to Purchaser upon payment of the Total Amount.
+                    THEREFORE BUYER IS RESPONSIBLE TO OBTAIN INSURANCE IF IT SO DESIRES THAT SHOULD TAKE EFFECT NO LATER
+                    THAN DATE OF PAYMENT.</span></h1>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        </li>
+        <li data-list-text="3.">
+            <h1 style="padding-left: 23pt;text-indent: 0pt;line-height: 109%;text-align: left;">NON-DISCLOSURE: <span
+                    class="p">Purchaser and Seller agree that its employees, representatives, agents, and/or its
+                    affiliates will not make any reference to the other party and/or its affiliates for the purpose of
+                    marketing and/or selling the Materials. Purchaser and Seller further agree, except as required by
+                    applicable law, to keep confidential, and not disclose to any other party, the terms and existence
+                    of this Agreement and any of the other party’s confidential information, including but not limited
+                    to, the </span>manufacturer and storage location <span class="p">of the Materials and the identity
+                    of the Purchaser of the Materials.</span></h1>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        </li>
+        <li data-list-text="4.">
+            <h1 style="padding-left: 23pt;text-indent: 0pt;line-height: 109%;text-align: left;">REGULATORY FILING: <span
+                    class="p">Purchaser is responsible for any and all regulatory filings associated with
+                    Purchaser&#39;s use of materials.</span></h1>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        </li>
+        <li data-list-text="5.">
+            <h1 style="padding-left: 41pt;text-indent: -18pt;line-height: 109%;text-align: left;">TRANSFER FEES AND
+                TAXES: <span class="p">Buyer is responsible for any and all transfer fees, taxes, transportation,
+                    removal, storage and any other fees or taxes relating the barrels being bought under this agreement,
+                    other than fees or taxes that are specifically paid or covered by Seller or not applicable as stated
+                    in writing above. These fees may be billed to Seller by the current owner of said barrels, which
+                    will then be billed to Buyer. Said fees are due to Seller by Buyer within 10 days after receiving
+                    the invoice for said fees.</span></h1>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        </li>
+        <li data-list-text="6.">
+            <h1 style="padding-left: 41pt;text-indent: -18pt;text-align: left;">REPRESENTATIONS:</h1>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <ol id="l2">
+                <li data-list-text="a.">
+                    <p style="padding-left: 41pt;text-indent: 0pt;line-height: 109%;text-align: left;">PURCHASER
+                        REPRESENTS AND WARRANTS TO SELLER THAT PURCHASER IS LEGALLY PERMITTED TO PURCHASE ALCOHOLIC
+                        LIQUIDS OF THE TYPE CONTEMPLATED HEREIN, THAT IT SHALL COMPLY WITH ALL APPLICABLE LAWS
+                        (INCLUDING PAYMENT OF ALL TAXES, FEES AND OTHER CHARGES ASSOCIATED WITH THIS SALE) WITH RESPECT
+                        TO THE</p>
+                    <p style="padding-top: 3pt;padding-left: 41pt;text-indent: 0pt;line-height: 109%;text-align: left;">
+                        MATERIALS, AND THAT IT AGREES TO INDEMNIFY AND HOLD SELLER HARMLESS AGAINST ANY LIABILITY,
+                        EXPENSES OR OTHER LOSSES INCURRED BY SELLER IN CONNECTION WITH CLAIMS OR PROCEEDINGS ARISING
+                        FROM PURCHASER’S BREACH OF THE FOREGOING.</p>
+                    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                </li>
+                <li data-list-text="b.">
+                    <p style="padding-left: 41pt;text-indent: 0pt;line-height: 109%;text-align: left;">SELLER CANNOT
+                        MAKE ANY REPRESENTATIONS AS TO THE PRODUCT THAT IS BEING PURCHASED OTHER THAN THE
+                        REPRESENTATIONS THAT HAVE BEEN MADE TO IT BY THE SELLER, AND THAT SAID REPRESENTATIONS ARE
+                        CONSISTENT WITH THE INFORMATION CONTAINED ON THE BARRELS, PURSUANT TO APPLICABLE LAWS. IN
+                        ADDITION, SAID BARRELS ARE SOLD ON AN “AS IS, WHERE IS” BASIS. BUYER UNDERSTANDS THAT BARRELS
+                        WILL NOT BE FULL DUE TO EVAPORATION AND LEAKAGE. SELLER DISCLAIMS ALL WARRANTIES, EXPRESS OR
+                        IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+                        PURPOSE, WITH RESPECT TO THE MATERIALS.</p>
+                    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                </li>
+                <li data-list-text="c.">
+                    <p style="padding-left: 41pt;text-indent: 0pt;line-height: 109%;text-align: left;">BUYER REPRESENTS
+                        THAT IT IS A RESELLER AND THAT IT IS TAX EXEMPT. BUYER UNDERSTANDS THAT IT MUST FROM A SALES AND
+                        USE TAX EXEMPT FORM FROM THE KENTUCKY DEPARTMENT OF REVENUE TO SELLER WITHIN 7 DAYS OF THE
+                        EXECUTION OF THIS CONTRACT.</p>
+                    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                </li>
+                <li data-list-text="d.">
+                    <h1 style="padding-left: 77pt;text-indent: -36pt;text-align: left;">INSPECTION AND DILIGENCE:
+                        <u>BUYER ASSUMES ALL RISK. Barrels</u></h1>
+                    <p class="s1" style="padding-top: 1pt;padding-left: 41pt;text-indent: 0pt;text-align: left;">are “as
+                        is where is.” </p>
+                    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                    <p style="text-indent: 0pt;text-align: left;" />
+                </li>
+            </ol>
+        </li>
+        <li data-list-text="7.">
+            <h1 style="padding-left: 17pt;text-indent: 5pt;line-height: 109%;text-align: justify;">STORAGE AND SHIPPING:
+                <span class="p">Storage of the Materials shall become the responsibility of the Purchaser at time of
+                    closing. Purchaser shall be responsible for arranging for shipment of the Materials from storage and
+                    removal facilities and shall pay all expenses of transporting the Materials.</span></h1>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        </li>
+        <li data-list-text="8.">
+            <h1 style="padding-left: 35pt;text-indent: -12pt;text-align: justify;">ASSIGNMENT: <u>This contract is not
+                    assignable.</u></h1>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        </li>
+        <li data-list-text="9.">
+            <h1 style="padding-left: 17pt;text-indent: 5pt;line-height: 109%;text-align: justify;">GOVERNING LAW: <span
+                    class="p">This Agreement shall be governed by and construed in accordance with the laws of the State
+                    of Kentucky without regard to any conflict of laws principles.</span></h1>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        </li>
+        <li data-list-text="10.">
+            <p style="padding-left: 17pt;text-indent: 5pt;line-height: 110%;text-align: left;"><b>LIMITATION OF
+                    LIABILITY: </b>In no event will Seller be liable to Purchaser for any lost profits, lost savings or
+                incidental, indirect, special or consequential damages, arising out of the Materials or the breach of
+                this Agreement, even if advised of the possibility of such damages. In all cases Seller<span
+                    class="s5">!</span>s liability shall not exceed the purchase price of the Materials as set forth in
+                this Agreement.</p>
+        </li>
+    </ol>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <ol id="l3">
+        <li data-list-text="12.">
+            <p class="s6" style="padding-left: 41pt;text-indent: -18pt;line-height: 109%;text-align: left;"> <span
+                    class="h1">NON-CIRCUMVENTION AGREEMENT: </span><span class="p">Buyer agrees not to attempt to
+                    contact the Owner or other brokers of said barrels to gain direct access to the barrels set forth in
+                    this this agreement.</span></p>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        </li>
+        <li data-list-text="13.">
+            <h1 style="padding-left: 41pt;text-indent: -18pt;line-height: 109%;text-align: left;">ENTIRE AGREEMENT:
+                <span class="p">This Agreement sets forth the entire agreement among the parties on the subject matter
+                    hereof and supersedes all prior negotiations, understandings</span></h1>
+        </li>
+    </ol>
+    <p style="padding-top: 3pt;padding-left: 41pt;text-indent: 0pt;line-height: 109%;text-align: left;">and agreements
+        between the parties concerning such subject matter. No amendment or modification of this Agreement will be made
+        except by a writing signed by the party to be bound by such amendment or modification or the successor or assign
+        of such party.</p>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <p class="s7" style="padding-left: 175pt;text-indent: 0pt;text-align: center;">[Signature Page Follows]</p>
+    <h1 style="padding-top: 3pt;padding-left: 5pt;text-indent: 0pt;line-height: 109%;text-align: left;">IN WITNESS
+        WHEREOF, THE UNDERSIGNED HEREBY EXECUTE THIS BULK SALES AGREEMENT AS OF THE DATE FIRST INDICATED ABOVE:</h1>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <h1 style="padding-left: 5pt;text-indent: 0pt;text-align: left;">Purchaser: {{purchaser.name}} Seller/Broker:
+    </h1>
+    <h1 style="padding-top: 1pt;padding-left: 293pt;text-indent: 0pt;text-align: left;">{{seller.name}}</h1>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <p style="padding-left: 302pt;text-indent: 0pt;text-align: left;">{{seller.contact_name}}</p>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <p class="s8" style="padding-left: 5pt;text-indent: 0pt;line-height: 1pt;text-align: left;"> </p>
+    <p style="padding-left: 5pt;text-indent: 0pt;text-align: left;">Name: {{purchaser.name}} Name: {{seller.contact_name}}</p>
+    <p style="padding-top: 1pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Title: Authorized Member Title:
+        Member</p>
+    <p class="s2" style="padding-top: 3pt;padding-left: 201pt;text-indent: 0pt;text-align: center;">APPENDIX A</p>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <h1 style="padding-left: 175pt;text-indent: 0pt;text-align: center;">Lot/Barrel Numbers</h1>
+    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+    <h1 style="padding-left: 5pt;text-indent: 0pt;line-height: 109%;text-align: left;">****LOT NUMBERS TO BE PROVIDED AS
+        SOON AS RECEIVED FROM OWNER AND/OR OWNER’S BROKER</h1>
+</body>
+
+</html>
