@@ -16,11 +16,11 @@ router.post('/passwordReset', function (req, res, next) {
 
     var mailObj = {
         to: req.body.email,
-        from: "admin@seelbach.com",
-        templateId: "d-3586b483b7e94c1b9520f4ed23d46648",
+        from: "admin@bonded.co",
+        templateId: "d-36d62886260a44e8bdaa35118a6f777f",
         dynamic_template_data: {
             //firstname: req.body.name,
-            linkurl: 'https://seelbach.com/password-reset?token=' + token
+            linkurl: 'https://bonded.co/password-reset?token=' + token
         }
     }
 
@@ -40,8 +40,8 @@ router.post('/verifyEmail', function (req, res, next) {
 
     var mailObj = {
         to: req.body.email,
-        from: "admin@seelbach.com",
-        templateId: "d-e5334b37f8e048ba8976bc5ae26a1ac9",
+        from: "admin@bonded.co",
+        templateId: "d-4e79ce5f2de54e7da25038113948200b",
         dynamic_template_data: {
             email: req.body.email,
             verification_code: code
@@ -54,7 +54,7 @@ router.post('/verifyEmail', function (req, res, next) {
     verify.storeEmailcode(req.body.user_id, code);
     
 });
-
+/*
 router.post('/messageNotification', function (req, res, next) {
 
     //get recipient's email from user_id
@@ -85,7 +85,8 @@ router.post('/messageNotification', function (req, res, next) {
     });
     
 });
-
+*/
+/*
 router.post('/rateYourPurchase', function (req, res, next) {
 
     //get recipient's email from user_id
@@ -120,7 +121,8 @@ router.post('/rateYourPurchase', function (req, res, next) {
     });
     
 });
-
+*/
+/*
 router.post('/listingReported', function (req, res, next) {
 
     var mailObj = {
@@ -140,7 +142,7 @@ router.post('/listingReported', function (req, res, next) {
     res.status(200).send({});
 
 });
-    
+*/  
 
 
 

@@ -7,6 +7,19 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+router.get('/exists', function(req, res, next) {
+  
+  let email = req.query.email;
+
+  tables.getByField('users','email',email).then(function(data){
+    if (data.length > 0) res.status(200).send({exists: true});
+    else res.status(200).send({exists: false});
+    console.log((data.length > 0 ? 'user exists':'user does not exist'));
+  });
+
+  //res.send('respond with a resource');
+});
+
 router.post('/validateCode', function(req, res, next) {
   var user_response = req.body.code;
   var user_phone = req.body.phone;
